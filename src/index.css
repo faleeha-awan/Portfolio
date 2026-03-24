@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0a0a0f;
+  color: #e8e8f0;
+}
+
+/* Hide scrollbar but keep scroll */
+.overflow-x-auto::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(123, 110, 246, 0.3);
+  color: #e8e8f0;
+}
