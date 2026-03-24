@@ -44,6 +44,7 @@ export const experience = [
       "Automated form handling and client notifications via Google Apps Script",
       "Leading AI chatbot integration for real-time billing support",
     ],
+    image: "/billsuremd.jpg", // drop logo in public/ folder
     logo: "B",
     color: "#7B6EF6",
   },
@@ -60,6 +61,7 @@ export const experience = [
       "Implemented ray tracing in Rust and raster graphics in Python",
       "Created Morse Code Translator in Kotlin and currency converter web app",
     ],
+    image: "/RC.jpg",
     logo: "RC",
     color: "#22d3ee",
   },
@@ -76,6 +78,7 @@ export const experience = [
       "Maintained records and documentation for fundraising involving 100+ donors",
       "Coordinated 20+ volunteers across remote teams",
     ],
+    image: "/OED.png", // no public logo — fallback to initials
     logo: "OED",
     color: "#4a4a6a",
   },
@@ -89,6 +92,7 @@ export const education = [
     location: "Delft, Netherlands",
     date: "2025 – Present",
     description: "Pursuing a degree at one of Europe's top technical universities, building on a strong foundation in Mathematics, Computer Science, and Physics from Cambridge A Levels.",
+    image: "/UNI.png",
     logo: "TU",
     color: "#22d3ee",
   },
@@ -99,6 +103,7 @@ export const education = [
     location: "Remote",
     date: "2024",
     description: "Selected to lead a section of Code in Place after completing the course as a student in 2023 — one of ~100 leaders chosen globally from thousands of applicants.",
+    image: "/code_in_place.png",
     logo: "S",
     color: "#7B6EF6",
   },
@@ -109,6 +114,7 @@ export const education = [
     location: "Lahore, Pakistan",
     date: "Aug 2023 – Aug 2025",
     description: "Mathematics (A), Computer Science (A), Physics (B). Graduated in the top 5% of cohort. All mandatory subjects for engineering and computer science programmes completed.",
+    image: "/ISL.jpg", // drop isl-logo.png in public/ if you have it
     logo: "ISL",
     color: "#4a4a6a",
   },
@@ -120,7 +126,7 @@ export const certifications = [
     title: "Asian Regional Space Settlement Design Competition",
     subtitle: "1st Place — Asia",
     year: "2025",
-    icon: "🥇",
+    image: "/arssdc.jpg",
     highlight: true,
   },
   {
@@ -128,25 +134,18 @@ export const certifications = [
     title: "International Computer Science Contest (ICSC)",
     subtitle: "Finalist — Top 10% of ~3,800 participants",
     year: "2025",
-    icon: "🏅",
+    image: "/ICSC.png",
     highlight: true,
   },
   {
     id: 3,
-    title: "Code in Place — Section Leader",
+    title: "Code in Place (Student to Section Leader)",
     subtitle: "Stanford University",
     year: "2024",
-    icon: "🎓",
+    image: "code_in_place.png",
     highlight: false,
   },
-  {
-    id: 4,
-    title: "Code in Place — Student",
-    subtitle: "Stanford University",
-    year: "2023",
-    icon: "📚",
-    highlight: false,
-  },
+  
 ];
 
 export const projects = [

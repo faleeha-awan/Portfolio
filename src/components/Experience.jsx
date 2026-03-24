@@ -40,9 +40,14 @@ function ExperienceCard({ item }) {
         className="w-full flex items-start gap-3 p-4 text-left"
       >
         {/* Logo */}
-        <div className="w-9 h-9 rounded-lg flex items-center justify-center text-[10px] font-mono font-bold shrink-0 border border-border"
+        <div className="w-9 h-9 rounded-lg flex items-center justify-center text-[10px] font-mono font-bold shrink-0 border border-border overflow-hidden"
           style={{ background: `${item.color}20`, color: item.color }}>
-          {item.logo}
+          {item.image
+            ? <img src={item.image} alt={item.company} className="w-full h-full object-contain p-1" onError={e => { e.target.style.display='none'; e.target.nextSibling.style.display='flex'; }} />
+            : null}
+          <span style={{ display: item.image ? 'none' : 'flex' }} className="w-full h-full items-center justify-center">
+            {item.logo}
+          </span>
         </div>
 
         {/* Main info */}
