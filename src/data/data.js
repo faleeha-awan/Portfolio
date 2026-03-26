@@ -24,9 +24,9 @@ export const personal = {
     { name: "Punjabi", flag: "🇵🇰" },
   ],
   socials: {
-    twitter: "#",
-    github: "https://github.com/falihaawan",
-    linkedin: "#",
+    twitter: "https://x.com/AwanFaleeh14706",
+    github: "https://github.com/faleeha-awan?tab=repositories",
+    linkedin: "https://www.linkedin.com/in/faliha-awan-a735722b5/",
   },
 };
 
@@ -149,6 +149,36 @@ export const certifications = [
 ];
 
 export const projects = [
+   {
+    id: 1,
+    title: "Richards & Law",
+    tagline: "Police report intake automation that cuts 60 minutes of paralegal work to under 2",
+    category: "Legal · AI Automation",
+    status: "Live",
+    tech: ["Node.js", "Express", "Claude API", "Clio API", "Brevo API", "Railway", "HTML/CSS/JS"],
+    date: "2025",
+    github: "https://github.com/faleeha-awan/Richards-Law-Automation",
+    live: null,
+    image: null,
+    color: "#1a1a2e",
+    detail: {
+      problem: "A New York personal injury law firm spent 45–60 minutes per police report on manual paralegal data entry — reading PDFs, identifying client vehicles, updating case fields, calculating deadlines, and drafting client emails. With dozens of reports per week, this was a major bottleneck.",
+      solution: "Built a full-stack automation system with a human-in-the-loop design. A paralegal uploads a police report PDF, Claude AI extracts all key case details using name-matching logic to identify the correct client vehicle. The paralegal receives a structured verification email, reviews all fields, and approves. On approval, four automated actions fire simultaneously.",
+      impact: [
+        "Reduced intake time from 45–60 minutes to under 2 minutes of human review",
+        "Writes 10 custom fields to Clio Matter via API automatically on approval",
+        "Calculates Statute of Limitations deadline and creates attorney calendar event in Clio",
+        "Generates filled Retainer Agreement via Clio document automation",
+        "Sends personalized client email with Retainer PDF and seasonal booking link via Brevo",
+      ],
+      highlights: [
+        "Human-in-the-loop architecture — AI extracts, human verifies, automation executes",
+        "Name-matching logic to identify client vs defendant across every police report",
+        "Seasonal booking link switches between in-office and virtual based on time of year",
+        "Deployed on Railway with live Clio API integration",
+      ],
+    },
+  },
   {
     id: 1,
     title: "BillsureMD",
@@ -157,10 +187,41 @@ export const projects = [
     status: "Live",
     tech: ["HTML", "CSS", "JavaScript", "Google Apps Script", "AI Chatbot"],
     date: "Jul 2025 – Present",
-    github: "https://github.com/falihaawan",
-    live: "https://billsuremd.com",
+    github: "https://github.com/faleeha-awan/Medical-Billing-Site",
+    live: "https://billsuremd.com/home/",
     image: null,
     color: "#1a1a2e",
+  },
+  {
+    id: 2,
+    title: "Relay",
+    tagline: "Smart teleprompter with real-time voice-follow that scrolls with your speech",
+    category: "Desktop App · AI",
+    status: "In Progress",
+    tech: ["Flutter", "Dart", "Windows Speech Recognition", "window_manager"],
+    date: "2025 – Present",
+    github: "https://github.com/faleeha-awan/Relay",
+    live: null,
+    image: null,
+    color: "#0d1a2e",
+    detail: {
+      problem: "Traditional teleprompters scroll at a fixed speed set in advance — you're constantly racing to keep up or waiting for it to catch up. No existing tool intelligently adapts to how you actually speak in real time.",
+      solution: "Built Relay, a cross-platform desktop teleprompter in Flutter/Dart for Windows and macOS. The hero feature — Voice Follow — uses real-time speech recognition and fuzzy text matching to continuously sync scroll position to exactly where you are speaking. Pause and it pauses. Speed up and it keeps up.",
+      impact: [
+        "Voice Follow engine runs at 60fps using Dart async primitives for smooth scroll rendering",
+        "Always-on-top floating window stays visible over video recording, Zoom, or live demos",
+        "Full manual mode — spacebar to play/pause, arrow keys to adjust speed in real time",
+        "Live word count and estimated reading time updates as you type",
+        "Zero backend, zero cloud dependency — ships as standalone Windows installer and macOS disk image",
+      ],
+      highlights: [
+        "Real-time speech recognition via Windows Speech Recognition platform plugin",
+        "Fuzzy matching algorithm syncs scroll to detected speech location",
+        "Native Windows desktop integration — always-on-top, freely resizable/repositionable",
+        "Architected for scale — voice engine, scroll logic, and UI fully separated",
+        "Planned: AI script generation, PDF/presentation to script, mobile remote companion app",
+      ],
+    },
   },
   {
     id: 2,
@@ -170,7 +231,7 @@ export const projects = [
     status: "In Progress",
     tech: ["Flutter", "Supabase", "SQL", "AI Chatbot"],
     date: "Jun 2025 – Present",
-    github: "https://github.com/falihaawan",
+    github: "https://github.com/faleeha-awan/Repair_App",
     live: null,
     image: null,
     color: "#0d1f2d",
@@ -183,7 +244,7 @@ export const projects = [
     status: "In Progress",
     tech: ["HTML", "CSS", "JavaScript", "Google Apps Script"],
     date: "Feb 2024 – Present",
-    github: "https://github.com/falihaawan",
+    github: "https://github.com/faleeha-awan/Caku_Palace-Website",
     live: null,
     image: null,
     color: "#1f1a2e",
@@ -196,9 +257,11 @@ export const projects = [
     status: "In Progress",
     tech: ["Flutter", "Dart", "Firebase"],
     date: "May 2024 – Aug 2024",
-    github: "https://github.com/falihaawan",
+    github: "https://github.com/faleeha-awan/Flutter-Voting-App/tree/master",
     live: null,
     image: null,
     color: "#1a2e1a",
   },
 ];
+
+
