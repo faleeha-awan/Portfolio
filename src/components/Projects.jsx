@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { projects } from "../data/data";
+import ProjectDetail from "./Projectdetail";
 
 const GitHubIcon = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
@@ -30,7 +31,7 @@ const statusConfig = {
   "Hackathon": { dot: "bg-cyan-400", text: "text-cyan-400", bg: "bg-cyan-400/10 border-cyan-400/20" },
 };
 
-function ProjectCard({ project, isActive }) {
+function ProjectCard({ project, isActive, onSelect }) {
   const status = statusConfig[project.status] || statusConfig["In Progress"];
 
   return (
@@ -101,7 +102,7 @@ function ProjectCard({ project, isActive }) {
         </div>
 
         {/* Links */}
-        <div className="flex gap-2 pt-1 border-t border-border/50">
+        <div className="flex gap-2 pt-1 border-t border-border/50 flex-wrap">
           <a href={project.github}
             target="_blank" rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-[11px] font-mono text-text-dim hover:text-text-primary transition-colors px-2 py-1.5 rounded hover:bg-surface">
@@ -110,14 +111,22 @@ function ProjectCard({ project, isActive }) {
           {project.live ? (
             <a href={project.live}
               target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-[11px] font-mono text-accent hover:text-accent/80 transition-colors px-2 py-1.5 rounded hover:bg-accent/10 ml-auto">
+              className="flex items-center gap-1.5 text-[11px] font-mono text-accent hover:text-accent/80 transition-colors px-2 py-1.5 rounded hover:bg-accent/10">
               <ExternalIcon /> Live Site
             </a>
           ) : (
-            <span className="flex items-center gap-1.5 text-[11px] font-mono text-text-dim px-2 py-1.5 ml-auto opacity-40 cursor-not-allowed">
+            <span className="flex items-center gap-1.5 text-[11px] font-mono text-text-dim px-2 py-1.5 opacity-40 cursor-not-allowed">
               <ExternalIcon /> Coming Soon
             </span>
           )}
+          <button
+            onClick={() => onSelect(project)}
+            className="ml-auto flex items-center gap-1 text-[11px] font-mono text-accent/70 hover:text-accent transition-colors px-2 py-1.5 rounded hover:bg-accent/5">
+            Details
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <polyline points="9,18 15,12 9,6"/>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
@@ -126,6 +135,7 @@ function ProjectCard({ project, isActive }) {
 
 export default function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [selectedProject, setSelectedProject] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
   const [dragStartX, setDragStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
@@ -252,7 +262,7 @@ export default function Projects() {
       >
         {projects.map((project, i) => (
           <div key={project.id} style={{ minWidth: cardWidth, width: cardWidth }}>
-            <ProjectCard project={project} isActive={i === activeIndex} />
+            <ProjectCard project={project} isActive={i === activeIndex} onSelect={setSelectedProject} />
           </div>
         ))}
         {/* Trailing space */}
@@ -271,6 +281,12 @@ export default function Projects() {
           />
         ))}
       </div>
+
+      {/* Detail panel */}
+      <ProjectDetail
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </section>
   );
 }

@@ -14,8 +14,26 @@ export default function Certifications() {
                 ? "border-accent/30 bg-accent/5 hover:border-accent/50"
                 : "border-border bg-card hover:border-border/80"
               }`}>
-            {/* Icon */}
-            <span className="text-xl shrink-0">{item.icon}</span>
+
+            {/* Image or emoji fallback */}
+            <div className="w-8 h-8 rounded-lg overflow-hidden shrink-0 flex items-center justify-center bg-surface border border-border">
+              {item.image ? (
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-contain p-0.5"
+                  onError={(e) => {
+                    e.target.style.display = "none";
+                    e.target.nextSibling.style.display = "flex";
+                  }}
+                />
+              ) : null}
+              <span
+                style={{ display: item.image ? "none" : "flex" }}
+                className="text-lg w-full h-full items-center justify-center">
+                {item.icon}
+              </span>
+            </div>
 
             {/* Info */}
             <div className="flex-1 min-w-0">

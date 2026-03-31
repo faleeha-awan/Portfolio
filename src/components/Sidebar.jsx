@@ -129,7 +129,7 @@ export default function Sidebar() {
         <div className="flex flex-wrap gap-3">
           {personal.languages.map((lang) => (
             <span key={lang.name} className="flex items-center gap-1.5 text-sm text-text-secondary font-body">
-              <span>{lang.flag}</span>
+              <span className="text-lg leading-none">{lang.flag}</span>
               {lang.name}
             </span>
           ))}

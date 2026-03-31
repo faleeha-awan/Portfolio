@@ -2,7 +2,7 @@ export const personal = {
   name: "Faliha Awan",
   pronouns: "she/her",
   verified: true,
-  photo: "/photo.jpeg", // replace with your actual photo
+  photo: "/photo.jpeg",
   about: "Software developer obsessed with tech innovation & business automation. Building real products for real clients.",
   intro: [
     "I'm Faliha Awan, a software developer and tech innovator passionate about building systems that automate and streamline how businesses operate. From production billing platforms for US healthcare companies to AI-powered cross-platform apps, I focus on shipping solutions that create real impact.",
@@ -44,9 +44,9 @@ export const experience = [
       "Automated form handling and client notifications via Google Apps Script",
       "Leading AI chatbot integration for real-time billing support",
     ],
-    image: "/billsuremd.jpg", // drop logo in public/ folder
+    image: "/billsuremd.jpg",
     logo: "B",
-    color: "#7B6EF6",
+    color: "#9998a7",
   },
   {
     id: 2,
@@ -78,7 +78,7 @@ export const experience = [
       "Maintained records and documentation for fundraising involving 100+ donors",
       "Coordinated 20+ volunteers across remote teams",
     ],
-    image: "/OED.png", // no public logo — fallback to initials
+    image: "/OED.png",
     logo: "OED",
     color: "#4a4a6a",
   },
@@ -114,7 +114,7 @@ export const education = [
     location: "Lahore, Pakistan",
     date: "Aug 2023 – Aug 2025",
     description: "Mathematics (A), Computer Science (A), Physics (B). Graduated in the top 5% of cohort. All mandatory subjects for engineering and computer science programmes completed.",
-    image: "/ISL.jpg", // drop isl-logo.png in public/ if you have it
+    image: "/ISL.jpg",
     logo: "ISL",
     color: "#4a4a6a",
   },
@@ -127,6 +127,7 @@ export const certifications = [
     subtitle: "1st Place — Asia",
     year: "2025",
     image: "/arssdc.jpg",
+    icon: "🥇",
     highlight: true,
   },
   {
@@ -135,6 +136,7 @@ export const certifications = [
     subtitle: "Finalist — Top 10% of ~3,800 participants",
     year: "2025",
     image: "/ICSC.png",
+    icon: "🏅",
     highlight: true,
   },
   {
@@ -142,14 +144,14 @@ export const certifications = [
     title: "Code in Place (Student to Section Leader)",
     subtitle: "Stanford University",
     year: "2024",
-    image: "code_in_place.png",
+    image: "/code_in_place.png",
+    icon: "🎓",
     highlight: false,
   },
-  
 ];
 
 export const projects = [
-   {
+  {
     id: 1,
     title: "Richards & Law",
     tagline: "Police report intake automation that cuts 60 minutes of paralegal work to under 2",
@@ -160,7 +162,7 @@ export const projects = [
     github: "https://github.com/faleeha-awan/Richards-Law-Automation",
     live: null,
     image: null,
-    color: "#1a1a2e",
+    color: "#1d2014",
     detail: {
       problem: "A New York personal injury law firm spent 45–60 minutes per police report on manual paralegal data entry — reading PDFs, identifying client vehicles, updating case fields, calculating deadlines, and drafting client emails. With dozens of reports per week, this was a major bottleneck.",
       solution: "Built a full-stack automation system with a human-in-the-loop design. A paralegal uploads a police report PDF, Claude AI extracts all key case details using name-matching logic to identify the correct client vehicle. The paralegal receives a structured verification email, reviews all fields, and approves. On approval, four automated actions fire simultaneously.",
@@ -180,7 +182,7 @@ export const projects = [
     },
   },
   {
-    id: 1,
+    id: 2,
     title: "BillsureMD",
     tagline: "Automated medical billing platform for a live U.S. healthcare company",
     category: "Healthcare · Automation",
@@ -191,9 +193,24 @@ export const projects = [
     live: "https://billsuremd.com/home/",
     image: null,
     color: "#1a1a2e",
+    detail: {
+      problem: "A U.S. healthcare company needed a centralized system to manage billing workflows, client data, and communications — without expensive off-the-shelf software.",
+      solution: "Built a fully custom responsive billing web app with automated form handling, email notifications, and Google Sheets integration via Apps Script. Currently leading ongoing AI chatbot integration and performance optimizations.",
+      impact: [
+        "100+ daily active users on a fully deployed production system",
+        "Automated billing workflows reduce manual overhead significantly",
+        "AI chatbot integration in progress for real-time billing support",
+        "Cross-browser compatible, scalable architecture",
+      ],
+      highlights: [
+        "Full-stack solo build — design to deployment",
+        "Google Apps Script automation for form handling and email notifications",
+        "Ongoing role as Lead Web Developer managing feature updates",
+      ],
+    },
   },
   {
-    id: 2,
+    id: 3,
     title: "Relay",
     tagline: "Smart teleprompter with real-time voice-follow that scrolls with your speech",
     category: "Desktop App · AI",
@@ -224,7 +241,7 @@ export const projects = [
     },
   },
   {
-    id: 2,
+    id: 4,
     title: "Repair App",
     tagline: "Cross-platform repair service app with AI, multilingual support & image workflows",
     category: "Mobile · AI",
@@ -235,9 +252,23 @@ export const projects = [
     live: null,
     image: null,
     color: "#0d1f2d",
+    detail: {
+      problem: "Repair service businesses lack a unified digital system for customers to submit requests, track status, and find repair guidance — especially across language barriers.",
+      solution: "Building a Flutter app with image-based repair request submissions, an AI chatbot for instant support, multilingual UI, and intelligent search pulling from manufacturer docs and video tutorials.",
+      impact: [
+        "Designed to scale to 500+ service requests per day",
+        "Multilingual support for broader accessibility",
+        "AI chatbot handles customer queries in real time",
+      ],
+      highlights: [
+        "Image-based repair request workflow",
+        "Secure auth and data management via Supabase",
+        "Intelligent search across manufacturer docs and video tutorials",
+      ],
+    },
   },
   {
-    id: 3,
+    id: 5,
     title: "Caku Palace",
     tagline: "E-commerce site with visual cake customizer and real-time AI assistant",
     category: "E-commerce · AI",
@@ -248,9 +279,23 @@ export const projects = [
     live: null,
     image: null,
     color: "#1f1a2e",
+    detail: {
+      problem: "A small online bakery needed a professional web presence to handle custom cake orders and customer inquiries without relying on third-party platforms.",
+      solution: "Built a fully responsive e-commerce site with a visual cake customization tool, order forms synced to email and Google Sheets, and an AI chatbot for 24/7 customer support.",
+      impact: [
+        "AI chatbot handles customer queries around the clock",
+        "Visual customizer improves order accuracy for custom cakes",
+        "Order and inquiry forms auto-sync to Google Sheets via Apps Script",
+      ],
+      highlights: [
+        "End-to-end solo build for a live small business",
+        "Visual customization tool for cakes and desserts",
+        "Integrated email and Google Sheets automation",
+      ],
+    },
   },
   {
-    id: 4,
+    id: 6,
     title: "Secure Voting App",
     tagline: "Cross-platform voting system built for the Election Commission of Pakistan",
     category: "Civic Tech · Mobile",
@@ -261,7 +306,19 @@ export const projects = [
     live: null,
     image: null,
     color: "#1a2e1a",
+    detail: {
+      problem: "Pakistan's electoral process faces challenges around accessibility, transparency, and security — existing digital solutions are fragmented or inaccessible to general voters.",
+      solution: "Developed during the Recurse Centre fellowship — a cross-platform Flutter app covering frontend, backend, and security layers for the Election Commission of Pakistan.",
+      impact: [
+        "Built end-to-end across frontend, backend, and security",
+        "Designed for real institutional use at scale",
+        "Developed during competitive RC fellowship in NYC",
+      ],
+      highlights: [
+        "Security-first architecture for electoral integrity",
+        "Cross-platform — single codebase for iOS and Android",
+        "Built under RC's rigorous self-directed engineering environment",
+      ],
+    },
   },
 ];
-
-
