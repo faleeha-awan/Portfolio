@@ -23,7 +23,7 @@ export default function Education() {
       <div className="flex flex-col gap-2.5">
         {education.map((item) => (
           <div key={item.id}
-            className="border border-border rounded-xl p-4 bg-card hover:border-accent/20 transition-all duration-300 flex gap-3">
+            className="border border-border rounded-xl p-4 bg-card hover:border-[#5F2E1B80] transition-all duration-300 flex gap-3">
             {/* Logo */}
             <div className="w-9 h-9 rounded-lg flex items-center justify-center text-[10px] font-mono font-bold shrink-0 border border-border overflow-hidden"
               style={{ background: `${item.color}20`, color: item.color }}>

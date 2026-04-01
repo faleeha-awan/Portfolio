@@ -11,8 +11,8 @@ export default function Certifications() {
           <div key={item.id}
             className={`flex items-center gap-3 p-3.5 rounded-xl border transition-all duration-300
               ${item.highlight
-                ? "border-accent/30 bg-accent/5 hover:border-accent/50"
-                : "border-border bg-card hover:border-border/80"
+                ? "border-[#5F2E1B60] bg-[#5F2E1B08] hover:border-[#5F2E1B]"
+                : "border-border bg-card hover:border-[#5F2E1B60]"
               }`}>
 
             {/* Image or emoji fallback */}

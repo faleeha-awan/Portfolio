@@ -34,7 +34,7 @@ function ExperienceCard({ item }) {
   const typeClass = typeColors[item.type] || "text-text-dim bg-surface border-border";
 
   return (
-    <div className="border border-border rounded-xl overflow-hidden hover:border-accent/20 transition-all duration-300 bg-card">
+    <div className="border border-border rounded-xl overflow-hidden hover:border-[#5F2E1B80] transition-all duration-300 bg-card cursor-pointer">
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-start gap-3 p-4 text-left"

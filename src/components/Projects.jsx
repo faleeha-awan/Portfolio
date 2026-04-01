@@ -37,8 +37,8 @@ function ProjectCard({ project, isActive, onSelect }) {
   return (
     <div className={`relative rounded-2xl border overflow-hidden transition-all duration-500 flex flex-col
       ${isActive
-        ? "border-accent/40 shadow-[0_0_40px_#7B6EF615]"
-        : "border-border hover:border-accent/20"
+        ? "border-[#5F2E1B] shadow-[0_0_30px_#5F2E1B18]"
+        : "border-border hover:border-[#5F2E1B80]"
       }`}
       style={{ background: project.color || "#13131c", minHeight: 280 }}
     >

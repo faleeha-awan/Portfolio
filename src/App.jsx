@@ -13,8 +13,8 @@ export default function App() {
       <div className="fixed inset-0 pointer-events-none"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(123,110,246,0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(123,110,246,0.03) 1px, transparent 1px)
+            linear-gradient(rgba(95,46,27,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(95,46,27,0.04) 1px, transparent 1px)
           `,
           backgroundSize: "60px 60px",
         }}
@@ -22,10 +22,10 @@ export default function App() {
 
       {/* Glow orbs */}
       <div className="fixed top-0 left-0 w-96 h-96 pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(123,110,246,0.06) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(95,46,27,0.08) 0%, transparent 70%)" }}
       />
       <div className="fixed bottom-0 right-0 w-80 h-80 pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(34,211,238,0.04) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(26,35,36,0.15) 0%, transparent 70%)" }}
       />
 
       {/* Layout */}

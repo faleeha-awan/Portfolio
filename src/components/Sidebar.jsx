@@ -55,14 +55,14 @@ export default function Sidebar() {
               </div>
             )}
           </div>
-          <span className="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-accent border-2 border-bg" />
+          <span className="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full border-2 border-bg" style={{ background: "#22c55e" }} />
         </div>
 
         {/* Name + pronouns + socials on mobile */}
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
             <h1 className="font-display font-bold text-text-primary text-xl leading-tight">{personal.name}</h1>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#7B6EF6" className="shrink-0">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#22c55e" className="shrink-0">
               <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 0 0 1.946-.806 3.42 3.42 0 0 1 4.438 0 3.42 3.42 0 0 0 1.946.806 3.42 3.42 0 0 1 3.138 3.138 3.42 3.42 0 0 0 .806 1.946 3.42 3.42 0 0 1 0 4.438 3.42 3.42 0 0 0-.806 1.946 3.42 3.42 0 0 1-3.138 3.138 3.42 3.42 0 0 0-1.946.806 3.42 3.42 0 0 1-4.438 0 3.42 3.42 0 0 0-1.946-.806 3.42 3.42 0 0 1-3.138-3.138 3.42 3.42 0 0 0-.806-1.946 3.42 3.42 0 0 1 0-4.438 3.42 3.42 0 0 0 .806-1.946 3.42 3.42 0 0 1 3.138-3.138z"/>
             </svg>
           </div>
@@ -129,7 +129,14 @@ export default function Sidebar() {
         <div className="flex flex-wrap gap-3">
           {personal.languages.map((lang) => (
             <span key={lang.name} className="flex items-center gap-1.5 text-sm text-text-secondary font-body">
-              <span className="text-lg leading-none">{lang.flag}</span>
+              <img
+                src={`https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/flags/4x3/${lang.code}.svg`}
+                width="20"
+                height="15"
+                alt={lang.name}
+                className="rounded-sm object-cover"
+                onError={(e) => { e.target.style.display = "none"; }}
+              />
               {lang.name}
             </span>
           ))}

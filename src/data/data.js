@@ -46,7 +46,7 @@ export const experience = [
     ],
     image: "/billsuremd.jpg",
     logo: "B",
-    color: "#9998a7",
+    color: "#7B6EF6",
   },
   {
     id: 2,
@@ -162,7 +162,7 @@ export const projects = [
     github: "https://github.com/faleeha-awan/Richards-Law-Automation",
     live: null,
     image: null,
-    color: "#1d2014",
+    color: "#0e161a",
     detail: {
       problem: "A New York personal injury law firm spent 45–60 minutes per police report on manual paralegal data entry — reading PDFs, identifying client vehicles, updating case fields, calculating deadlines, and drafting client emails. With dozens of reports per week, this was a major bottleneck.",
       solution: "Built a full-stack automation system with a human-in-the-loop design. A paralegal uploads a police report PDF, Claude AI extracts all key case details using name-matching logic to identify the correct client vehicle. The paralegal receives a structured verification email, reviews all fields, and approves. On approval, four automated actions fire simultaneously.",
@@ -192,7 +192,7 @@ export const projects = [
     github: "https://github.com/faleeha-awan/Medical-Billing-Site",
     live: "https://billsuremd.com/home/",
     image: null,
-    color: "#1a1a2e",
+    color: "#181210",
     detail: {
       problem: "A U.S. healthcare company needed a centralized system to manage billing workflows, client data, and communications — without expensive off-the-shelf software.",
       solution: "Built a fully custom responsive billing web app with automated form handling, email notifications, and Google Sheets integration via Apps Script. Currently leading ongoing AI chatbot integration and performance optimizations.",
@@ -220,7 +220,7 @@ export const projects = [
     github: "https://github.com/faleeha-awan/Relay",
     live: null,
     image: null,
-    color: "#0d1a2e",
+    color: "#0f141d",
     detail: {
       problem: "Traditional teleprompters scroll at a fixed speed set in advance — you're constantly racing to keep up or waiting for it to catch up. No existing tool intelligently adapts to how you actually speak in real time.",
       solution: "Built Relay, a cross-platform desktop teleprompter in Flutter/Dart for Windows and macOS. The hero feature — Voice Follow — uses real-time speech recognition and fuzzy text matching to continuously sync scroll position to exactly where you are speaking. Pause and it pauses. Speed up and it keeps up.",
@@ -251,7 +251,7 @@ export const projects = [
     github: "https://github.com/faleeha-awan/Repair_App",
     live: null,
     image: null,
-    color: "#0d1f2d",
+    color: "#0e161a",
     detail: {
       problem: "Repair service businesses lack a unified digital system for customers to submit requests, track status, and find repair guidance — especially across language barriers.",
       solution: "Building a Flutter app with image-based repair request submissions, an AI chatbot for instant support, multilingual UI, and intelligent search pulling from manufacturer docs and video tutorials.",
@@ -278,7 +278,7 @@ export const projects = [
     github: "https://github.com/faleeha-awan/Caku_Palace-Website",
     live: null,
     image: null,
-    color: "#1f1a2e",
+    color: "#1a1510",
     detail: {
       problem: "A small online bakery needed a professional web presence to handle custom cake orders and customer inquiries without relying on third-party platforms.",
       solution: "Built a fully responsive e-commerce site with a visual cake customization tool, order forms synced to email and Google Sheets, and an AI chatbot for 24/7 customer support.",
@@ -305,7 +305,7 @@ export const projects = [
     github: "https://github.com/faleeha-awan/Flutter-Voting-App/tree/master",
     live: null,
     image: null,
-    color: "#1a2e1a",
+    color: "#0f141d",
     detail: {
       problem: "Pakistan's electoral process faces challenges around accessibility, transparency, and security — existing digital solutions are fragmented or inaccessible to general voters.",
       solution: "Developed during the Recurse Centre fellowship — a cross-platform Flutter app covering frontend, backend, and security layers for the Election Commission of Pakistan.",
