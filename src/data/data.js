@@ -321,4 +321,33 @@ export const projects = [
       ],
     },
   },
+   {
+    id: 7,
+    title: "Apex",
+    tagline: "AI-powered knowledge assistant for student motorsport engineering teams.",
+    category: "AI · Motorsport · RAG",
+    status: "Completed",
+    tech: ["Python", "Claude API", "ChromaDB", "FastAPI", "sentence-transformers", "Google Drive API", "GitHub API"],
+    date: "May 2026",
+    github: "https://github.com/faleeha-awan/Apex",
+    live: null,
+    image: null,
+    color: "#0f1117",
+    detail: {
+      problem: "Student engineering teams like Forze Hydrogen Racing lose months of accumulated knowledge every year when members graduate — design decisions, supplier contacts, testing failures, and embedded architecture scattered across Drive folders, Slack threads, and people's heads.",
+      solution: "Built a RAG-based internal knowledge assistant that ingests team documentation from GitHub, Google Drive, and PDFs, makes it instantly queryable via natural language, and automatically surfaces knowledge gaps — questions the documentation can't answer, logged for someone to fill.",
+      impact: [
+        "Answers technical questions with full source attribution across all ingested documents",
+        "Automatic knowledge gap tracker logs unanswered questions to an admin panel",
+        "Multi-source ingestion pipeline: GitHub repos, Google Drive docs, PDFs, and local markdown",
+        "23 unit tests across chunking, ingestion, and gap tracking modules",
+      ],
+      highlights: [
+        "Full RAG pipeline: document ingestion, chunking, semantic embedding, vector search, Claude synthesis",
+        "ChromaDB vector store with sentence-transformers embeddings running fully locally",
+        "FastAPI backend with chat interface and admin panel — no framework dependencies on the frontend",
+        "Built specifically with Forze Hydrogen Racing's AI Engineer role requirements in mind",
+      ],
+    },
+  },
 ];
